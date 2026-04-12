@@ -1,0 +1,17 @@
+.card {
+    background: var(--hb-surface);
+    border: 1px solid var(--hb-border);
+    border-radius: var(--hb-radius);
+    box-shadow: 0 12px 30px var(--hb-shadow);
+}
+
+.title {
+    padding: 14px 16px 0 16px;
+    font-family: var(--hb-font-title);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.body {
+    padding: 14px 16px 16px 16px;
+}

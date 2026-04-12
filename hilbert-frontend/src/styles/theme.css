@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap");
+
+:root {
+    --hb-bg: #fcfbff;
+    --hb-bg-soft: #f5f3ff;
+    --hb-surface: rgba(255, 255, 255, 0.88);
+    --hb-surface-strong: #ffffff;
+    --hb-surface-tint: rgba(245, 243, 255, 0.92);
+    --hb-border: rgba(109, 94, 245, 0.14);
+    --hb-border-strong: rgba(109, 94, 245, 0.28);
+    --hb-shadow: 0 24px 80px rgba(75, 60, 201, 0.08);
+    --hb-shadow-soft: 0 10px 30px rgba(93, 76, 228, 0.08);
+
+    --hb-text: #16151d;
+    --hb-text-soft: #6e6a7c;
+    --hb-text-muted: #8f89a4;
+
+    --hb-primary: #6d5ef5;
+    --hb-primary-deep: #4b3cc9;
+    --hb-primary-soft: rgba(109, 94, 245, 0.12);
+    --hb-lavender: #a78bfa;
+    --hb-success: #17b26a;
+    --hb-success-soft: rgba(23, 178, 106, 0.14);
+    --hb-warning: #f79009;
+    --hb-warning-soft: rgba(247, 144, 9, 0.16);
+    --hb-error: #f04438;
+    --hb-error-soft: rgba(240, 68, 56, 0.14);
+    --hb-info: #4f7fff;
+    --hb-info-soft: rgba(79, 127, 255, 0.14);
+
+    --hb-radius-xs: 12px;
+    --hb-radius-sm: 16px;
+    --hb-radius-md: 20px;
+    --hb-radius-lg: 28px;
+    --hb-gap-1: 8px;
+    --hb-gap-2: 12px;
+    --hb-gap-3: 16px;
+    --hb-gap-4: 20px;
+    --hb-gap-5: 24px;
+    --hb-gap-6: 32px;
+    --hb-gap-7: 40px;
+
+    --hb-font-body: "Manrope", "Segoe UI", sans-serif;
+    --hb-font-title: "Unbounded", "Segoe UI", sans-serif;
+    --hb-font-mono: "JetBrains Mono", "Cascadia Code", monospace;
+    --hb-control-height: 46px;
+    --hb-sidebar-width: 292px;
+    --hb-sidebar-width-collapsed: 104px;
+
+    --hb-hero-gradient:
+        radial-gradient(circle at top left, rgba(167, 139, 250, 0.18), transparent 34%),
+        radial-gradient(circle at 82% 12%, rgba(109, 94, 245, 0.18), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(245, 243, 255, 0.84));
+}

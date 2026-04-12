@@ -1,0 +1,24 @@
+.btn {
+    border-radius: 12px;
+    padding: 10px 12px;
+    border: 1px solid var(--hb-border);
+    cursor: pointer;
+    transition: transform 0.05s ease, filter 0.15s ease;
+    font-weight: 700;
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.primary {
+    background: rgba(0,0,0,0.12);
+}
+
+.ghost {
+    background: transparent;
+}
+
+.danger {
+    background: rgba(0,0,0,0.16);
+    border-color: rgba(0,0,0,0.55);
+}

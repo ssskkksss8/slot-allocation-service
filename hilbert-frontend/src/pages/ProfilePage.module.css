@@ -1,0 +1,30 @@
+.page { display: grid; gap: 16px; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 16px;
+    align-items: start;
+    font-weight: 700;
+}
+
+.roles { margin-top: 10px; }
+
+.actions { display: grid; gap: 10px; }
+
+.sep { height: 10px; }
+
+.note {
+    opacity: 0.85;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.info {
+    grid-column: 1 / -1;
+    border: 1px solid rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-weight: 800;
+}

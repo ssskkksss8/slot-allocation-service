@@ -1,0 +1,64 @@
+services:
+  app:
+    build: .
+    container_name: hilbert-backend
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/hilbert_db?stringtype=unspecified
+      - SPRING_DATASOURCE_USERNAME=${DB_USER:-db_user}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD:-db_password}
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=validate
+      - SPRING_RABBITMQ_HOST=rabbitmq
+      - SPRING_RABBITMQ_PORT=5672
+      - SPRING_RABBITMQ_USERNAME=${RABBITMQ_USER:-guest}
+      - SPRING_RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD:-guest}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-ZGVmYXVsdF9qd3Rfc2VjcmV0X2tleV9pZl9hcnRlbV9kb2VzX25vdF9oYXZlX2RvdF9lbnZfZmlsZTI3Mzg5NTcyOTgzNzg5MjM3ODk0MjY1MDI5MzQ3ODIzNTg2OTIzODc0NzIzODc0=}
+    depends_on:
+      - db
+    networks:
+      - hilbert-net
+    
+  frontend:
+    build: ./hilbert-frontend
+    container_name: hilbert-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - app
+    environment:
+      - API_BASE_URL=http://localhost:8081
+    networks:
+      - hilbert-net
+
+  db:
+    image: postgres:16-alpine
+    container_name: hilbert-postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=hilbert_db
+      - POSTGRES_USER=${DB_USER:-db_user}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-db_password}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_coursework_data:/var/lib/postgresql/data
+      - ./docker/postgres-init:/docker-entrypoint-initdb.d
+    networks:
+      - hilbert-net
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: hilbert-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - hilbert-net
+
+volumes:
+  postgres_coursework_data:
+
+networks:
+  hilbert-net:
+    driver: bridge

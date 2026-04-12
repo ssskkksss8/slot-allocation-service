@@ -1,0 +1,14 @@
+.wrap { display: grid; gap: 6px; }
+.label { font-weight: 700; opacity: 0.9; }
+
+.input {
+    background: rgba(255,255,255,0.55);
+    border: 1px solid var(--hb-border);
+    border-radius: 12px;
+    padding: 10px 12px;
+    outline: none;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.12);
+}

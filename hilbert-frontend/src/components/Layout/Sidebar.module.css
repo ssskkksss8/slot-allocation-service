@@ -1,0 +1,40 @@
+.side {
+    padding: 16px;
+    border-right: 2px solid rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.06);
+}
+
+.brand {
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    margin-bottom: 14px;
+}
+
+.group { display: grid; gap: 10px; }
+
+.item {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.25);
+    background: rgba(242,226,160,0.55);
+    font-weight: 800;
+}
+
+.active {
+    outline: 2px solid rgba(0,0,0,0.35);
+    background: rgba(242,226,160,0.82);
+}
+
+.sep { height: 14px; }
+
+.sectionTitle {
+    font-weight: 900;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+.hint {
+    opacity: 0.8;
+    font-size: 12px;
+}
